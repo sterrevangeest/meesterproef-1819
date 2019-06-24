@@ -1,12 +1,21 @@
 **🎓Meesterproef 2019 @cmda-minor-web · 2018-2019** 
 
-# Brief
 
-# Debrief
+# Pitch
+
+Gemeente Amsterdam has the desire to have an app that contains all the sportofferings of Amsterdam Zuidoost. The user should quickly get an overview of where specific sportsactivities are taking place. What other information is relevant for the user should be researched.  
 
 ## The problem
 
-## Pitch
+There are many sport providers in Zuidoost (around 180), but the participation of the inhabitants (around 900.000) in sport activities there is the lowest in whole Amsterdam. Providers often have difficulty in spotlighting their offer and potential users may have problems to find what they are looking for.
+
+## The team
+
+During this project I worked together with three other Web-Developers: Bas Pieren, Robin Stut en Jesse Dijkman. We joined four other UX students. 
+
+# Debrief
+
+Design digital interfaces so the full range of sports in Zuidoost in the first place and secondly for whole Amsterdam can be reached. The platform should function as an overview for all sport offerings.
 
 ## Background Information
 
