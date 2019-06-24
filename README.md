@@ -43,10 +43,20 @@ Prioritized even more (MoSCoW), scherper concept
 ## Week 6 | Delivery 24 juni t/m 28 juni
 
 # Learning Goals
+### WAFS
+
 | Criteria 	| Description 	| Use within project 	|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------	|
 | You can retrieve data, manipulate it and dynamically convert it to html elements by using. templating. You understand how you can work with an external API using asynchronous code. 	| (Different) smart methods are used to manipulate JSON data. 	| Different databases are used to provide users with an overview of all sports activities, sports clubs and activities. 	|
 | You understand how you can manage states in your applications and you inform the user of states where necessary. 	| Feedback is given at the right moments in a way that it improves the user experience. 	| Since a lot of data needs to be fetched, it is important that the user receives feedback about that.. 	|
+
+## Browser Tech
+
+| Criteria 	| Description 	| Use within project 	|
+|----------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------	|
+| You can understand the core functionality of a use case. 	| The student has well understood the core functionality of a use case and has acted accordingly. 	| The assignment / concept is too big to "finish" in 5 weeks. It is important to make choices here. -> We are currently using the MOSCOW method 	|
+
+
 
 
 
