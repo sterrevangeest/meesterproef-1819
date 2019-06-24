@@ -43,11 +43,10 @@ Prioritized even more (MoSCoW), scherper concept
 ## Week 6 | Delivery 24 juni t/m 28 juni
 
 # Learning Goals
-| Criteria                                                                                                                                                                             	| Description                                                                           	| Use within project                                                                                                    	|
+| Criteria 	| Description 	| Use within project 	|
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------	|
-| You can retrieve data, manipulate it and dynamically convert it to html elements by using. templating. You understand how you can work with an external API using asynchronous code. 	| (Different) smart methods are used to manipulate JSON data.                           	| Different databases are used to provide users with an overview of all sports activities, sports clubs and activities. 	|
-| You understand how you can manage states in your applications and you inform the user of states where necessary.                                                                     	| Feedback is given at the right moments in a way that it improves the user experience. 	| Since a lot of data needs to be fetched, it is important that the user receives feedback about that..                 	|
-
+| You can retrieve data, manipulate it and dynamically convert it to html elements by using. templating. You understand how you can work with an external API using asynchronous code. 	| (Different) smart methods are used to manipulate JSON data. 	| Different databases are used to provide users with an overview of all sports activities, sports clubs and activities. 	|
+| You understand how you can manage states in your applications and you inform the user of states where necessary. 	| Feedback is given at the right moments in a way that it improves the user experience. 	| Since a lot of data needs to be fetched, it is important that the user receives feedback about that.. 	|
 
 
 
