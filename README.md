@@ -62,14 +62,27 @@ A platform that:
 
 The website focusses on the 3 pillars 
 
-- Providing information (about sport events, sport clubs and sport locations)
-- Self actualization (about what kind of sport do I wanna do? How to live a healthier life?)
-- Community (getting inspired by people in their network)
+- **Providing information**
+Users can read about sport events, sport clubs and sport locations
+    - A-Z list
+    - Map
+- **Self actualization** 
+Users have their own space, where they have their own profile:
+    - Where they can track their activity
+    - Save sport challenges
+    - Create competitions
+ - **Community** 
+Involve people by creating a digital network by:
+    - Share-functions
+    - Social Media integration
+    - Push-messages
+    - Reviews
 
 #### Wireframes
 
 ![wireframe](images/homepage.png)
-During this week we made an setup for an Git/GitHub environment. Read more about that here.  
+
+
 
 The homepage contains: 
 - A call-to-action to start the sportquiz to find out which sports the user the best. 
@@ -79,70 +92,82 @@ The homepage contains:
 
 The rest of the website contains:
 
-- Sports Activities List (A-Z)
+- Sports Activities List (A-Z) & map
 - Events page
 - News page
 - Healthy Living Blog
 
+
+
 ## Testing 
 
-During the first week we tested the wireframes the UX designers made. I personally tested the quiz.
+During this week we made an setup for an Git/GitHub environment. Read more about that here. We also tested the wireframes the UX designers made. 
 
-## Target group 1
+I personally tested the quiz together with a UX designer. **UITLEG OVER TESTEN**
 
-(## Target group 2)
+That week we showed Vincent, an sport broker in Zuidoost, the wireframes and told them about the concept. He was very happy to see the A-Z list. He told us that often mothers of children come to him to ask where their children can play sports. Due to a lack of an overview and sometimes also because these people cannot read or write (dutch), it's difficult for him to help. With this list, he could help them.
+
+When we showed Vincent the wireframes about personal accounts, he told us that we have to be very careful with that because of the new privacy law. 
+
+After the tests and meeting it was clear that the concept needed some adjustments. But not all the UX designers wanted to adjust the concept. As a result, they each went their own way. Because of this and because we realized that we had to set priorities because the concept was big to finish within 5 weeks, we made some priorities using the MoSCoW method.
 
 ## Results 
 
-After testing and talking about the concept we realized that building all the features the UX designers had in mind wasn't realistic. So we made some priorities using the MoSCoW method. 
 
-![]() // moscow afbeelding
+![](images/MoSCoW.jpg)
 
 The main features we focus on from now on are: 
-uitleg bij geven
+
 - A Quiz/Configurator: where an user can find out what kind of sport suits him the best by filling in some personal questions. After completing the quiz, the user will see an overview of which sports would suit the user best. The user can view a list of associated clubs for each sport.
 
 - A list with all sport activities in Amsterdam: so a user and/or sport broker can see in a simple overview what kind of sports are available in Amsterdam (Zuidoost). In the form of a list and a map.
 
 - An environment for sport providers: so sports providers can create an event and add it to an overview.
 
-
 Other features are cool but are not very necessary to show what the concept is like. 
 
-I worked out most of the sports list functionalities. You can read more about that here.
+Now that it became clear which way we were heading and since we had no design yet, I started designing the home page.
+
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
+<!-- I worked out most of the sports list functionalities. You can read more about that here. -->
 
 
 ## Week 5 | 25 juni t/m 28 juni
 
-Gesprek met Vincent over 
-After the meeting with Vincent we had the feeling that 
-enthousiaster van UX ontwerp. 
-
-
-Gesprek met Koop over eventbased 
-
 During a conversation with Koop about the project, we discovered that it was better to focus on sports events than sports clubs. After all, we want people to start exercising. But they probably won't start if we (only) show them an list of sport clubs. We better show a list of events they can join more easily, so that they can try out first before deciding if they want to join a club.
 
+During a new meeting with the client (and Vincent) we presented our "new" concept. 
 
+From the feedback we have adjusted the following:
+- Change the word events to activities. It was not clear that events could also include trial lessons. 
+- Show not only sport activities but also sport clubs.
 
-## Week 6 | Delivery 24 juni t/m 28 juni
+I got the feeling that the client was a little bit sceptical about all this. Also because the UX designers also showed their Marvel prototypes which had some nice transitions and it probably looked like a more already finished product. 
+
+To ensure that the client will also be more enthousiast about our project, we added some small things that made our website more fancier. 
+
+## Eindpresentaties? 
+
 
 # Learning Goals
 ### WAFS
 
 | Criteria 	| Description 	| Use within project 	|
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------	|
-| You can retrieve data, manipulate it and dynamically convert it to html elements by using. templating. You understand how you can work with an external API using asynchronous code. 	| (Different) smart methods are used to manipulate JSON data. 	| Different databases are used to provide users with an overview of all sports activities, sports clubs and activities. 	|
-| You understand how you can manage states in your applications and you inform the user of states where necessary. 	| Feedback is given at the right moments in a way that it improves the user experience. 	| Since a lot of data needs to be fetched, it is important that the user receives feedback about that.. 	|
-
-## Browser Tech
-
-| Criteria 	| Description 	| Use within project 	|
-|----------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------	|
-| You can understand the core functionality of a use case. 	| The student has well understood the core functionality of a use case and has acted accordingly. 	| The assignment / concept is too big to "finish" in 5 weeks. It is important to make choices here. -> We are currently using the MOSCOW method 	|
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| You can understand the core functionality of a use case. (Browser Tech) 	| The student has well understood the core functionality of a use case and has acted accordingly. 	| The assignment / concept is too big to "finish" in 5 weeks. It is important to make choices here. 	|
+| You can retrieve data, manipulate it and dynamically convert it to html elements by using. templating. You understand how you can work with an external API using asynchronous code. (WAFS) 	| (Different) smart methods are used to manipulate JSON data. 	| Different databases are used to provide users with an overview of all sports activities, sports clubs and activities. 	|
+| You can add structure to your code by applying patterns. You can argue the choice for the chosen patterns (WAFS) 	| Minimal use was made of an IIFE and Object Literals to introduce structure, in the form of modules, to the code and to prevent unnecessary contamination of the global scope 	| Because we work on the same project in a team of four, it is important to make agreements about code styles. With all the different functionalities, it is also useful to work with modules. 	|
+| You know the difference between client side and server side rendering and you can use server side rendering to display data from an API. (PM) 	| The application can at least display an overview page and detail page without having JS turned on in the browser. 	| Since you never know who turned of javascript and because it improves the performance for the users. 	|
 
 
 ## Samenwerking met UX 
+
+## Samenwerking met Web Dev
+
+- git & githyb
+- files opnieuw ordenen
+- data management 
 
 
 
