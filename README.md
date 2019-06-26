@@ -14,14 +14,14 @@ There are many sport providers in Zuidoost (around 180), but the participation o
 
 During this project I worked together with three other Web-Developers: Bas Pieren, Robin Stut en Jesse Dijkman. During the first week we also worked together with four User Experience students.  
 
-# Debrief
-
-Design digital interfaces so the full range of sports in Zuidoost in the first place and secondly for whole Amsterdam can be reached. The platform should function as an overview for all sport offerings.
 
 ## Research (with user insights)
 
 The User Experience Designers worked out a concept and wireframes based on research they did. 
 
+## Research
+
+During interviews and fieldresearch the UX people gathered the following insights:
 
 
 ## Goals
