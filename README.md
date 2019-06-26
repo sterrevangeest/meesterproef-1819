@@ -68,7 +68,7 @@ The website focusses on the 3 pillars
 
 #### Wireframes
 
-!(images/homepage.png)[]
+![wireframe](images/homepage.png)
 During this week we made an setup for an Git/GitHub environment. Read more about that here.  
 
 The homepage contains: 
@@ -78,7 +78,6 @@ The homepage contains:
 - A section where inhabitants of Zuidoost can find information about other factors to live a healthier life.
 
 The rest of the website contains:
-
 
 - Sports Activities List (A-Z)
 - Events page
