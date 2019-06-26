@@ -99,20 +99,17 @@ The rest of the website contains:
 
 
 
-## Testing 
+## Testing & meeting with client
 
 During this week we made an setup for an Git/GitHub environment. Read more about that here. We also tested the wireframes the UX designers made. 
-
-I personally tested the quiz together with a UX designer. **UITLEG OVER TESTEN**
 
 That week we showed Vincent, an sport broker in Zuidoost, the wireframes and told them about the concept. He was very happy to see the A-Z list. He told us that often mothers of children come to him to ask where their children can play sports. Due to a lack of an overview and sometimes also because these people cannot read or write (dutch), it's difficult for him to help. With this list, he could help them.
 
 When we showed Vincent the wireframes about personal accounts, he told us that we have to be very careful with that because of the new privacy law. 
 
+### Adjusting the concept 
+
 After the tests and meeting it was clear that the concept needed some adjustments. But not all the UX designers wanted to adjust the concept. As a result, they each went their own way. Because of this and because we realized that we had to set priorities because the concept was big to finish within 5 weeks, we made some priorities using the MoSCoW method.
-
-## Results 
-
 
 ![](images/MoSCoW.jpg)
 
@@ -128,12 +125,14 @@ Other features are cool but are not very necessary to show what the concept is l
 
 Now that it became clear which way we were heading and since we had no design yet, I started designing the home page.
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+<!-- Afbeelding design -->
+
+![Alt Text](https://media.giphy.com/media/cNwgkYGg0brCVECLdX/giphy.gif)
 
 <!-- I worked out most of the sports list functionalities. You can read more about that here. -->
 
 
-## Week 5 | 25 juni t/m 28 juni
+## Adjusting again
 
 During a conversation with Koop about the project, we discovered that it was better to focus on sports events than sports clubs. After all, we want people to start exercising. But they probably won't start if we (only) show them an list of sport clubs. We better show a list of events they can join more easily, so that they can try out first before deciding if they want to join a club.
 
@@ -143,11 +142,13 @@ From the feedback we have adjusted the following:
 - Change the word events to activities. It was not clear that events could also include trial lessons. 
 - Show not only sport activities but also sport clubs.
 
-I got the feeling that the client was a little bit sceptical about all this. Also because the UX designers also showed their Marvel prototypes which had some nice transitions and it probably looked like a more already finished product. 
+I got the feeling that the client was a little bit sceptical about all this. Maybe because the UX designers also showed their Marvel prototypes which had some nice transitions and it probably looked like a more already finished product. 
 
 To ensure that the client will also be more enthousiast about our project, we added some small things that made our website more fancier. 
 
-## Eindpresentaties? 
+## Endresult
+
+
 
 
 ## Personal learning goals
@@ -180,38 +181,6 @@ To prevent the data from having to be fetched again every time the page is refre
 
 First: fetching the data
 
-```js
-	return new Promise(async (resolve, reject) => {
-		try {
-			const response = await fetch(url)
-			const data = await response.json()
-			resolve(data)
-		} catch (err) {
-			console.log(err)
-			reject(500)
-		}
-	})
-```
-Then: write a file on the server with the data.
-```js
-return new Promise((resolve, reject) => {
-    fs.readFile(path, (err, data) => {
-        if (err) {
-            console.log(err)
-            reject(500)
-        } else {
-            const json = data.toString()
-
-            if (!json) {
-                resolve(JSON.stringify([]))
-            } else {
-                resolve(json)
-            }
-        }
-    })
-})
-
-```
 
 I had to deal with the problem that when the data it will never overwrite the data that's already saved in a file on the server.
 
