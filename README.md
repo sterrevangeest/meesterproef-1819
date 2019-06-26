@@ -150,8 +150,7 @@ To ensure that the client will also be more enthousiast about our project, we ad
 ## Eindpresentaties? 
 
 
-# Learning Goals
-### WAFS
+## Personal learning goals
 
 | Criteria 	| Description 	| Use within project 	|
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
@@ -159,6 +158,59 @@ To ensure that the client will also be more enthousiast about our project, we ad
 | You can retrieve data, manipulate it and dynamically convert it to html elements by using. templating. You understand how you can work with an external API using asynchronous code. (WAFS) 	| (Different) smart methods are used to manipulate JSON data. 	| Different databases are used to provide users with an overview of all sports activities, sports clubs and activities. 	|
 | You can add structure to your code by applying patterns. You can argue the choice for the chosen patterns (WAFS) 	| Minimal use was made of an IIFE and Object Literals to introduce structure, in the form of modules, to the code and to prevent unnecessary contamination of the global scope 	| Because we work on the same project in a team of four, it is important to make agreements about code styles. With all the different functionalities, it is also useful to work with modules. 	|
 | You know the difference between client side and server side rendering and you can use server side rendering to display data from an API. (PM) 	| The application can at least display an overview page and detail page without having JS turned on in the browser. 	| Since you never know who turned of javascript and because it improves the performance for the users. 	|
+
+**Core functionality of a use case.**
+
+The concept the UX designers first presented was quite a complex and big concept. From the beginning my team and I knew that we couldn't build this in 5 weeks. That's why we used the MoSCoW method to prioritize the functionalities. 
+
+While creating the A-Z list, I also had to set priorities. I asked myself the following questions: 
+- It is very important that the user can also sort the list differently?
+- Is it important that the user can search this list of sports with a search bar?
+
+NO. So I focused on the most important thing: Show all the sports you can do in Amsterdam and the corresponding sports clubs and activities.
+
+During every meeting with the client, the client introduced us to new people who also worked in Zuidoost for the "sports world". These people all had new insights and whishes for the website.
+
+**Retrieve and manipulate data**
+
+Within the website we use different databases to provide users with an overview of all sports activities and sports clubs.
+
+To prevent the data from having to be fetched again every time the page is refreshed I save the data on the server after it was loaded for the first time.
+
+First: fetching the data
+
+```js
+	return new Promise(async (resolve, reject) => {
+		try {
+			const response = await fetch(url)
+			const data = await response.json()
+			resolve(data)
+		} catch (err) {
+			console.log(err)
+			reject(500)
+		}
+	})
+```
+Then: 
+```
+return new Promise((resolve, reject) => {
+    fs.readFile(path, (err, data) => {
+        if (err) {
+            console.log(err)
+            reject(500)
+        } else {
+            const json = data.toString()
+
+            if (!json) {
+                resolve(JSON.stringify([]))
+            } else {
+                resolve(json)
+            }
+        }
+    })
+})
+
+```
 
 
 ## Samenwerking met UX 
