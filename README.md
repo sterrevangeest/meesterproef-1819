@@ -171,6 +171,7 @@ NO. So I focused on the most important thing: Show all the sports you can do in 
 
 During every meeting with the client, the client introduced us to new people who also worked in Zuidoost for the "sports world". These people all had new insights and whishes for the website.
 
+
 **Retrieve and manipulate data**
 
 Within the website we use different databases to provide users with an overview of all sports activities and sports clubs.
@@ -191,8 +192,8 @@ First: fetching the data
 		}
 	})
 ```
-Then: 
-```
+Then: write a file on the server with the data.
+```js
 return new Promise((resolve, reject) => {
     fs.readFile(path, (err, data) => {
         if (err) {
@@ -211,6 +212,11 @@ return new Promise((resolve, reject) => {
 })
 
 ```
+
+I had to deal with the problem that when the data it will never overwrite the data that's already saved in a file on the server.
+
+To understand when and how I had to filter my data i created a diagram: 
+
 
 
 ## Samenwerking met UX 
