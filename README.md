@@ -158,6 +158,8 @@ To ensure that the client will also be more enthousiast about our project, we ad
 
 This week we delivered our prototype. We presented it to the client and gave a quick demo. They where very pleased with the end result and asked us for some tips on how to approach the actual realization of the project.
 
+![](images/meesterproef.jpg)
+
 
 ## Personal learning goals
 
