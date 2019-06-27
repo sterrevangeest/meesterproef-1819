@@ -1,6 +1,8 @@
 **🎓Meesterproef 2019 @cmda-minor-web · 2018-2019** 
 
-During the Meesterproef I worked on a project for Gemeente Amsterdam. 
+During the Meesterproef I worked on a project for Gemeente Amsterdam.
+
+![](images/screen.png)
 
 ## Brief
 
@@ -156,11 +158,11 @@ To ensure that the client will also be more enthousiast about our project, we ad
 | Criteria 	| Description 	| Use within project 	|
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 | You can understand the core functionality of a use case. (Browser Tech) 	| The student has well understood the core functionality of a use case and has acted accordingly. 	| The assignment / concept is too big to "finish" in 5 weeks. It is important to make choices here. 	|
-| You can retrieve data, manipulate it and dynamically convert it to html elements by using. templating. You understand how you can work with an external API using asynchronous code. (WAFS) 	| (Different) smart methods are used to manipulate JSON data. 	| Different databases are used to provide users with an overview of all sports activities, sports clubs and activities. 	|
+| You can retrieve data, manipulate it and dynamically convert it to html elements by using. templating. You understand how you can work with an external API using asynchronous code. (WAFS) 	| (Different) smart methods are used to manipulate and manage JSON data. 	| Different databases are used to provide users with an overview of all sports activities, sports clubs and activities. 	|
 | You can add structure to your code by applying patterns. You can argue the choice for the chosen patterns (WAFS) 	| Minimal use was made of an IIFE and Object Literals to introduce structure, in the form of modules, to the code and to prevent unnecessary contamination of the global scope 	| Because we work on the same project in a team of four, it is important to make agreements about code styles. With all the different functionalities, it is also useful to work with modules. 	|
 | You know the difference between client side and server side rendering and you can use server side rendering to display data from an API. (PM) 	| The application can at least display an overview page and detail page without having JS turned on in the browser. 	| Since you never know who turned of javascript and because it improves the performance for the users. 	|
 
-**Core functionality of a use case.**
+### Core functionality
 
 The concept the UX designers first presented was quite a complex and big concept. From the beginning my team and I knew that we couldn't build this in 5 weeks. That's why we used the MoSCoW method to prioritize the functionalities. 
 
@@ -170,33 +172,170 @@ While creating the A-Z list, I also had to set priorities. I asked myself the fo
 
 NO. So I focused on the most important thing: Show all the sports you can do in Amsterdam and the corresponding sports clubs and activities.
 
-During every meeting with the client, the client introduced us to new people who also worked in Zuidoost for the "sports world". These people all had new insights and whishes for the website.
+<!-- During every meeting with the client, the client introduced us to new people who also worked in Zuidoost for the "sports world". These people all had new insights and whishes for the website. -->
 
 
-**Retrieve and manipulate data**
+### Retrieve and manipulate and manage data 
 
 Within the website we use different databases to provide users with an overview of all sports activities and sports clubs.
 
-To prevent the data from having to be fetched again every time the page is refreshed I save the data on the server after it was loaded for the first time.
+To prevent the data from having to be fetched again every time the page is refreshed I save the data on the server after it was loaded for the first time. To get an overview I created an diagram together with my teammates. 
 
-First: fetching the data
+![](images/datamodel2.jpg)
+Digital version:
+![](images/datamodel3.png)
+
+To store the data I created variables on the server: 
+
+```js
+let data = []
+```
+
+When fetching the data I check if there already is data in the variable. 
+
+```js
+if (data.length === 0) {
+    const response = await fetch(url)
+    const data = await response.json()
+    resolve(data)
+}
+```
+If not > fetch the data and resolve
+```js
+    else {
+    resolve(data)
+}
+```
+Else resolve the already existing data
+
+It would of course be more ideal to store this data in a database, but it is a prototype. A database was not important for this prototype.
+
+When something changes in the data, I can never show this. Since I now get the data from the variable instead of the direct source. Jesse wrote something for this.
+
+```js
+let _eventData, _clubsData, _descriptionData, _quizData
+
+async function updateData() {
+	_eventData = await fetch.file("data/json/sportEvents.json")
+	_eventData = JSON.parse(_eventData)
+
+	_clubsData = await fetch.file("data/json/sportaanbieders.json")
+	_clubsData = JSON.parse(_clubsData)
+
+	_descriptionData = await fetch.file("data/json/sportDescription.json")
+	_descriptionData = JSON.parse(_descriptionData)
+
+	_quizData = await fetch.file("data/json/sportQuizFilter.json")
+	_quizData = JSON.parse(_quizData)
+}
+
+updateData()
+
+setInterval(updateData, 1000 * 60 * 60 * 24)
+```
+
+This is making sure the data will be checked every day. 
+
+To manipulate the data I used `.filter`, `.map` and `.reduce`. 
+
+```js
+const allSportClubs = dataMapping.filter(item => Object.keys(item).length !== 0) 
+// remove all empty records
+
+const allSports = allSportClubs.map(item => item.sport)
+const uniqueSports = [...new Set(allSports)].sort()
+// create an array with all unique sports
+
+// create an array that sorts every sport with the same first letter in the same key entry 
+const sortedSports = uniqueSports.reduce((a, sport) => {
+    if (sport !== undefined) {
+        let firstLetter = sport[0].toLocaleUpperCase()
+        // either push to an existing key entry or create one
+        if (a[firstLetter]) {
+            a[firstLetter].push(sport)
+        } else {
+            a[firstLetter] = [sport]
+        }
+        return a
+    }
+}, [])
+
+```
+
+## Structure 
+You can add structure to your code by applying patterns. You can argue the choice for the chosen patterns (WAFS)
+
+Because we all worked on different features, we started working in modules. It helped not only getting structure but also when merging different branches, there probably will be less merge conflicts.
+
+Read about: how we worked together as a team and created structure.
 
 
-I had to deal with the problem that when the data it will never overwrite the data that's already saved in a file on the server.
 
-To understand when and how I had to filter my data i created a diagram: 
-
+### Samenwerking met Web Dev
 
 
-## Samenwerking met UX 
-
-## Samenwerking met Web Dev
-
-- git & githyb
 - files opnieuw ordenen
-- data management 
+- data management samenkomt
 
+Working in modules
+File structure 
 
+#### git & github
+When it comes to git and Github I learned a lot! I never worked in a same repository with other developers before. So Bas created an Branch structure: 
+```
+master: The main branch. Everything thats on here works 100%.
+|
+|- development: The branch that we are working on. Development should be merged every week with master.
+|  |
+|  |- feature/name: The branch you create to work on a feature. Before you create a new feature you must pull from development.
+|
+```
+Then accidentally I deleted the development branch 😱😱😱. Luckily we all had a local copy. So after that we activated branch protection. Now we had to create an pull request before merging with the master.
 
+#### Folder structure
+After a few weeks, the overview in the different folders became a bit lost. At that point we sat down to discuss how to re-organize the folder structure. 
 
+![](images/img.jpg)
 
+```
+root
+|
+|- data/
+|  |
+|  |- json/
+|  |- raw/
+|
+|- modules/
+|
+|- public/
+|  |
+|  |- css/
+|  |  |
+|  |  |- modules/
+|  |  |- styles.css
+|  |
+|  |- images/
+|  |
+|  |- js/
+|     |- modules
+|     |- script.js
+|
+|- views/
+|  |
+|  |- pages/
+|  |  |- index.ejs
+|  |- partials/
+|
+|- app.js
+|
+```
+## Code
+We also went to sit down and discuss our code. 
+
+- Dubble `"` instead of single `'`.
+- No `;` at the end.
+- Multiple variables would each have `const` or `let` written in front of them. No `,` seperation.
+
+![](images/RefactorClass.jpg)
+
+This also saved a lot of confusion during merge conflicts. In a next project I want to do this type of discussion at the start of a project. It takes a lot less time then it did now. 
