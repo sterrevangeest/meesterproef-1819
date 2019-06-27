@@ -269,18 +269,13 @@ Because we all worked on different features, we started working in modules. It h
 
 Read about: how we worked together as a team and created structure.
 
+## Server side vs. client side 
 
+All the data is retrieved, manipulated and managed on the server. So every page is be able to load without JS on. 
 
-### Samenwerking met Web Dev
+## Working in a Team
 
-
-- files opnieuw ordenen
-- data management samenkomt
-
-Working in modules
-File structure 
-
-#### git & github
+#### Git & Github
 When it comes to git and Github I learned a lot! I never worked in a same repository with other developers before. So Bas created an Branch structure: 
 ```
 master: The main branch. Everything thats on here works 100%.
@@ -329,7 +324,7 @@ root
 |- app.js
 |
 ```
-## Code
+### Code
 We also went to sit down and discuss our code. 
 
 - Dubble `"` instead of single `'`.
@@ -339,3 +334,6 @@ We also went to sit down and discuss our code.
 ![](images/RefactorClass.jpg)
 
 This also saved a lot of confusion during merge conflicts. In a next project I want to do this type of discussion at the start of a project. It takes a lot less time then it did now. 
+
+
+I enjoyed working with my teammates. There was room to have discussions and to discuss how we would divide certain structures. Because we saw each other every day and we were able to communicate well, we were also able to ensure that our code was structured.
