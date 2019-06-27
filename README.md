@@ -1,8 +1,11 @@
 **🎓Meesterproef 2019 @cmda-minor-web · 2018-2019** 
 
 During the Meesterproef I worked on a project for Gemeente Amsterdam.
+Check the general Github repo [here](#working-in-a-team).
 
 ![](images/screen.png)
+
+**Week 1 & 2 | 20/05 - 31/05**
 
 ## Brief
 
@@ -100,10 +103,13 @@ The rest of the website contains:
 - Healthy Living Blog
 
 
+**Week 3 | 03/06 - 07/06**
 
 ## Testing & meeting with client
 
-During this week we made an setup for an Git/GitHub environment. Read more about that here. We also tested the wireframes the UX designers made. 
+During this week we made a setup for an Git/GitHub environment. Read more about that [here](#working-in-a-team). We also tested the wireframes the UX designers made. 
+
+
 
 That week we showed Vincent, an sport broker in Zuidoost, the wireframes and told them about the concept. He was very happy to see the A-Z list. He told us that often mothers of children come to him to ask where their children can play sports. Due to a lack of an overview and sometimes also because these people cannot read or write (dutch), it's difficult for him to help. With this list, he could help them.
 
@@ -133,7 +139,7 @@ Now that it became clear which way we were heading and since we had no design ye
 
 <!-- I worked out most of the sports list functionalities. You can read more about that here. -->
 
-
+**Week 4 & 5 | 10/06 - 21/06**
 ## Adjusting again
 
 During a conversation with Koop about the project, we discovered that it was better to focus on sports events than sports clubs. After all, we want people to start exercising. But they probably won't start if we (only) show them an list of sport clubs. We better show a list of events they can join more easily, so that they can try out first before deciding if they want to join a club.
@@ -148,9 +154,9 @@ I got the feeling that the client was a little bit sceptical about all this. May
 
 To ensure that the client will also be more enthousiast about our project, we added some small things that made our website more fancier. 
 
-## Endresult
+**Week 6 | 24/06 - 26/06**
 
-
+This week we delivered our prototype. We presented it to the client and gave a quick demo. They where very pleased with the end result and asked us for some tips on how to approach the actual realization of the project.
 
 
 ## Personal learning goals
@@ -177,7 +183,7 @@ NO. So I focused on the most important thing: Show all the sports you can do in 
 
 ### Retrieve and manipulate and manage data 
 
-Within the website we use different databases to provide users with an overview of all sports activities and sports clubs.
+Within the website we use different databases to provide users with an overview of all sports activities and sports clubs. During this project I mostly worked on the A-Z list. For that I needed a lot of data.
 
 To prevent the data from having to be fetched again every time the page is refreshed I save the data on the server after it was loaded for the first time. To get an overview I created an diagram together with my teammates. 
 
@@ -263,11 +269,9 @@ const sortedSports = uniqueSports.reduce((a, sport) => {
 ```
 
 ## Structure 
-You can add structure to your code by applying patterns. You can argue the choice for the chosen patterns (WAFS)
-
 Because we all worked on different features, we started working in modules. It helped not only getting structure but also when merging different branches, there probably will be less merge conflicts.
 
-Read about: how we worked together as a team and created structure.
+More about how we worked together as a team and created structure [here](#working-in-a-team)
 
 ## Server side vs. client side 
 
